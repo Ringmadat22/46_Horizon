@@ -63,3 +63,21 @@ document.addEventListener("keydown", (e) => {
 
 // toggle hamburger menu
 hamburgerBtn.addEventListener("click", toggleHamburger);
+
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar'); // Replace with your navbar class
+
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop) {
+    // Scroll down - hide navbar
+    navbar.style.top = "-80px"; // Adjust the value based on your navbar height
+  } else {
+    // Scroll up - show navbar
+    navbar.style.top = "0";
+  }
+  
+  lastScrollTop = scrollTop;
+});
+

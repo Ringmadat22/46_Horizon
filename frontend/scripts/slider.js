@@ -11,6 +11,11 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+// Automatic Slide Rotation
+let autoSlide = setInterval(() => {
+  plusSlides(1); // Automatically go to the next slide
+}, 10000); // Change slide every 10 seconds
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");

@@ -1,148 +1,244 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>64 HORIZON</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">64 Horizon</label>
-        <ul>
-            <li><a href="#">SEE A MOVIE</a></li>
-            <li><a href="#">FOOD & BEVERAGES</a></li>
-            <li><a href="#">SHOP</a></li>
-            <li><a href="#">DROPDOWN</a></li>
-            <li><a class="active" href="#">BUY TICKETS</a></li>
-        </ul>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">64 Horizon</label>
+      <ul>
+        <li><a href="#">SEE A MOVIE</a></li>
+        <li><a href="#">FOOD & BEVERAGES</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">DROPDOWN</a></li>
+        <li><a class="active" href="#">BUY TICKETS</a></li>
+      </ul>
     </nav>
     <main>
-        <section class="slider">
-            <div class="slider-container">
-                <div class="slider-main">
-                    <!-- Slideshow container -->
-                    <div class="slideshow-container">
-                        <!-- Full-width images with number and caption text -->
-                        <div class="mySlides fade">
-                            <!-- <div class="numbertext">1 / 5</div> -->
-                            <img src="images/deadpool.jpg" style="width: 100%" />
-                            <div class="text-container">
-                                <div class="text-main">
-                                    <div id="movie_title" class="">
-
-                                    </div>
-                                    <div>
-                                        <button id="buy_now">Buy Now</button>
-                                        <button id="watch_trailer_btn" class="watch-trailer" data-video-id="FyKWUTwSYAs"><i class="fa fa-play-circle-o" style="font-size:28px;color:#fff;margin-right: 15px;"></i>Watch Trailer</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <!-- <div class="numbertext">1 / 5</div> -->
-                            <img src="images/MOVIE.jpg" style="width: 100%" />
-                            <div class="text-container">
-                                <div class="text-main">
-                                    <div id="movie_title" class="">
-                                        <h1>A LEGEND</h1>
-                                    </div>
-                                    <div>
-                                        <button id="buy_now">Buy Now</button>
-                                        <button id="watch_trailer_btn" class="watch-trailer" data-video-id="Jm27YjLnPHc"><i class="fa fa-play-circle-o" style="font-size:28px;color:#fff;margin-right: 15px;"></i>Watch Trailer</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <!-- <div class="numbertext">1 / 5</div> -->
-                            <img src="images/movie1.jpg" style="width: 100%" />
-                            <div class="text-container">
-                                <div class="text-main">
-                                    <div>
-                                        <button id="buy_now">Buy Now</button>
-                                        <button id="watch_trailer_btn" class="watch-trailer" data-video-id="Jm27YjLnPHc"><i class="fa fa-play-circle-o" style="font-size:28px;color:#fff;margin-right: 15px;"></i>Watch Trailer</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <!-- <div class="numbertext">1 / 5</div> -->
-                            <img src="images/movie2.jpg" style="width: 100%" />
-                            <div class="text-container">
-                                <div class="text-main">
-                                    <div>
-                                        <button id="buy_now">Buy Now</button>
-                                        <button id="watch_trailer_btn" class="watch-trailer" data-video-id="Jm27YjLnPHc"><i class="fa fa-play-circle-o" style="font-size:28px;color:#fff;margin-right: 15px;"></i>Watch Trailer</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <!-- <div class="numbertext">1 / 5</div> -->
-                            <img src="images/movie3.jpg" style="width: 100%" />
-                            <div class="text-container">
-                                <div class="text-main">
-                                    <div>
-                                        <button id="buy_now">Buy Now</button>
-                                        <button id="watch_trailer_btn" class="watch-trailer" data-video-id="FyKWUTwSYAs"><i class="fa fa-play-circle-o" style="font-size:28px;color:#fff;margin-right: 15px;"></i>Watch Trailer</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Next and previous buttons -->
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <br />
-
-                    <!-- The dots/circles -->
-                    <div style="text-align: center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
-                    </div>
+      <section class="slider">
+        <div class="slider-container">
+          <div class="slider-main">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <!-- <div class="numbertext">1 / 5</div> -->
+                <div id="mySlides_image_div">
+                  <img id="mySlides_image" src="images/deadpool.jpg" />
                 </div>
-            </div>
-        </section>
 
-        <section class="video_player">
-            <div class="video_player_container">
-                <!-- Video Modal -->
-<div id="videoModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-        <iframe id="videoFrame" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</div>
+                <div class="text-container">
+                  <div class="text-main">
+                    <div id="movie_title" class="">
+                      <h1>DEAD POOL</h1>
+                    </div>
+                    <div>
+                      <button id="buy_now">Buy Now</button>
+                      <button
+                        id="watch_trailer_btn"
+                        class="watch-trailer"
+                        data-video-id="Idh8n5XuYIA"
+                      >
+                        <i
+                          class="fa fa-play-circle-o"
+                          style="
+                            font-size: 28px;
+                            color: #fff;
+                            margin-right: 15px;
+                          "
+                        ></i
+                        >Watch Trailer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mySlides fade">
+                <!-- <div class="numbertext">1 / 5</div> -->
+                <div id="mySlides_image_div">
+                  <img id="mySlides_image" src="images/MOVIE.jpg" />
+                </div>
 
+                <div class="text-container">
+                  <div class="text-main">
+                    <div id="movie_title" class="">
+                      <h1>A LEGEND</h1>
+                    </div>
+                    <div>
+                      <button id="buy_now">Buy Now</button>
+                      <button
+                        id="watch_trailer_btn"
+                        class="watch-trailer"
+                        data-video-id="Jm27YjLnPHc"
+                      >
+                        <i
+                          class="fa fa-play-circle-o"
+                          style="
+                            font-size: 28px;
+                            color: #fff;
+                            margin-right: 15px;
+                          "
+                        ></i
+                        >Watch Trailer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mySlides fade">
+                <!-- <div class="numbertext">1 / 5</div> -->
+                <div id="mySlides_image_div">
+                  <img id="mySlides_image" src="images/movie1.jpg" />
+                </div>
+
+                <div class="text-container">
+                  <div class="text-main">
+                    <div id="movie_title" class="">
+                      <h1>A LEGEND</h1>
+                    </div>
+                    <div>
+                      <button id="buy_now">Buy Now</button>
+                      <button
+                        id="watch_trailer_btn"
+                        class="watch-trailer"
+                        data-video-id="hIrmsHpF7p4"
+                      >
+                        <i
+                          class="fa fa-play-circle-o"
+                          style="
+                            font-size: 28px;
+                            color: #fff;
+                            margin-right: 15px;
+                          "
+                        ></i
+                        >Watch Trailer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mySlides fade">
+                <!-- <div class="numbertext">1 / 5</div> -->
+                <div id="mySlides_image_div">
+                  <img id="mySlides_image" src="images/movie2.jpg" />
+                </div>
+
+                <div class="text-container">
+                  <div class="text-main">
+                    <div id="movie_title" class="">
+                      <h1>A LEGEND</h1>
+                    </div>
+                    <div>
+                      <button id="buy_now">Buy Now</button>
+                      <button
+                        id="watch_trailer_btn"
+                        class="watch-trailer"
+                        data-video-id="Jm27YjLnPHc"
+                      >
+                        <i
+                          class="fa fa-play-circle-o"
+                          style="
+                            font-size: 28px;
+                            color: #fff;
+                            margin-right: 15px;
+                          "
+                        ></i
+                        >Watch Trailer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mySlides fade">
+                <!-- <div class="numbertext">1 / 5</div> -->
+                <div id="mySlides_image_div">
+                  <img id="mySlides_image" src="images/movie3.jpg" />
+                </div>
+
+                <div class="text-container">
+                  <div class="text-main">
+                    <div id="movie_title" class="">
+                      <h1>A LEGEND</h1>
+                    </div>
+                    <div>
+                      <button id="buy_now">Buy Now</button>
+                      <button
+                        id="watch_trailer_btn"
+                        class="watch-trailer"
+                        data-video-id="Jm27YjLnPHc"
+                      >
+                        <i
+                          class="fa fa-play-circle-o"
+                          style="
+                            font-size: 28px;
+                            color: #fff;
+                            margin-right: 15px;
+                          "
+                        ></i
+                        >Watch Trailer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        </section>
+            <br />
+
+            <!-- The dots/circles -->
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video_player">
+        <div class="video_player_container">
+          <!-- Video Modal -->
+          <div id="videoModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <iframe
+                id="videoFrame"
+                width="100%"
+                height="100%"
+                src=""
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <section></section>
     <script src="scripts/slider.js"></script>
     <script src="scripts/video.js"></script>
-</body>
-
+  </body>
 </html>
