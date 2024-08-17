@@ -1,26 +1,28 @@
-// Open modal and load the trailer with autoplay and mute
+// Function to open the modal and play the video
 function openModal(videoId) {
-    const modal = document.getElementById('videoModal');
-    const iframe = document.getElementById('videoFrame');
-    
-    // Autoplay with mute to avoid restrictions
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`; 
+    const modal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
+    const youtubeUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+    // Set the video src and display the modal
+    videoFrame.src = youtubeUrl;
     modal.style.display = "block";
 }
 
-// Close modal and stop the video
+// Function to close the modal and stop the video
 function closeModal() {
-    const modal = document.getElementById('videoModal');
-    const iframe = document.getElementById('videoFrame');
-    
+    const modal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
+
+    // Hide the modal and stop the video by removing the src
     modal.style.display = "none";
-    iframe.src = ""; // Stop the video
+    videoFrame.src = "";
 }
 
-// Add event listeners to the "Watch Trailer" buttons
+// Attach event listeners to the Watch Trailer buttons
 document.querySelectorAll('.watch-trailer').forEach(button => {
-    button.addEventListener('click', () => {
-        const videoId = button.getAttribute('data-video-id');
+    button.addEventListener('click', function() {
+        const videoId = this.getAttribute('data-video-id');
         openModal(videoId);
     });
 });
