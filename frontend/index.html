@@ -217,28 +217,157 @@
         </div>
       </section>
 
-      <section class="video_player">
-        <div class="video_player_container">
-            <!-- Video Modal -->
-            <div id="videoModal" class="modal">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div class="modal-content">
-                    <iframe
-                        id="videoFrame"
-                        width="100%"
-                        height="100%"
-                        src=""
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                </div>
-            </div>
+      <section id="videoModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <iframe
+            id="videoFrame"
+            width="100%"
+            src=""
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-    </section>
+      </section>
+
+      <section class="movies_section">
+        <div class="movies_div">
+          <div class="movies_header">
+            <div class="left_movies_header">
+              <h1>MOVIES AT HORIZON</h1>
+            </div>
+            <div class="right_movies">
+              <button id="now_showing_btn" class="active">NOW SHOWING</button>
+              <button id="coming_soon_btn">COMING SOON</button>
+            </div>
+          </div>
+          <div class="movies_main">
+            <!-- Now Showing Section -->
+            <div class="now_showing">
+              <div class="now_showing_container grid-container">
+                <!-- Movie Card 1 -->
+                <div class="movie-card">
+                  <div class="movie-content">
+                    <h2 class="movie-title">Deadpool</h2>
+                    <p class="movie-rating">Rating: 8.5/10</p>
+                    <p class="movie-genre">Genre: Action, Comedy</p>
+                    <p class="movie-description">
+                      A wisecracking mercenary gets experimented on and becomes
+                      immortal but ugly, and sets out to track down the man who
+                      ruined his looks.
+                    </p>
+                    <a href="#" class="buy-tickets">Buy Tickets</a>
+                  </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-content">
+                      <h2 class="movie-title">Deadpool</h2>
+                      <p class="movie-rating">Rating: 8.5/10</p>
+                      <p class="movie-genre">Genre: Action, Comedy</p>
+                      <p class="movie-description">
+                        A wisecracking mercenary gets experimented on and becomes
+                        immortal but ugly, and sets out to track down the man who
+                        ruined his looks.
+                      </p>
+                      <a href="#" class="buy-tickets">Buy Tickets</a>
+                    </div>
+                  </div>
+                  <div class="movie-card">
+                    <div class="movie-content">
+                      <h2 class="movie-title">Deadpool</h2>
+                      <p class="movie-rating">Rating: 8.5/10</p>
+                      <p class="movie-genre">Genre: Action, Comedy</p>
+                      <p class="movie-description">
+                        A wisecracking mercenary gets experimented on and becomes
+                        immortal but ugly, and sets out to track down the man who
+                        ruined his looks.
+                      </p>
+                      <a href="#" class="buy-tickets">Buy Tickets</a>
+                    </div>
+                  </div>
+                  <div class="movie-card">
+                    <div class="movie-content">
+                      <h2 class="movie-title">Deadpool</h2>
+                      <p class="movie-rating">Rating: 8.5/10</p>
+                      <p class="movie-genre">Genre: Action, Comedy</p>
+                      <p class="movie-description">
+                        A wisecracking mercenary gets experimented on and becomes
+                        immortal but ugly, and sets out to track down the man who
+                        ruined his looks.
+                      </p>
+                      <a href="#" class="buy-tickets">Buy Tickets</a>
+                    </div>
+                  </div>
+                <!-- Repeat Movie Cards as needed -->
+              </div>
+            </div>
+      
+            <!-- Coming Soon Section (Initially Hidden) -->
+            <div class="coming_up hidden">
+              <div class="coming_up_container grid-container">
+                <!-- Movie Card 1 -->
+                <div class="movie-card">
+                  <div class="movie-content">
+                    <h2 class="movie-title">Deadpool 2</h2>
+                    <p class="movie-rating">Rating: 8.0/10</p>
+                    <p class="movie-genre">Genre: Action, Comedy</p>
+                    <p class="movie-description">
+                      The mercenary returns for more wisecracking adventures.
+                    </p>
+                    <a href="#" class="buy-tickets">Buy Tickets</a>
+                  </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-content">
+                      <h2 class="movie-title">Deadpool</h2>
+                      <p class="movie-rating">Rating: 8.5/10</p>
+                      <p class="movie-genre">Genre: Action, Comedy</p>
+                      <p class="movie-description">
+                        A wisecracking mercenary gets experimented on and becomes
+                        immortal but ugly, and sets out to track down the man who
+                        ruined his looks.
+                      </p>
+                      <a href="#" class="buy-tickets">Buy Tickets</a>
+                    </div>
+                  </div>
+                  <div class="movie-card">
+                    <div class="movie-content">
+                      <h2 class="movie-title">Deadpool</h2>
+                      <p class="movie-rating">Rating: 8.5/10</p>
+                      <p class="movie-genre">Genre: Action, Comedy</p>
+                      <p class="movie-description">
+                        A wisecracking mercenary gets experimented on and becomes
+                        immortal but ugly, and sets out to track down the man who
+                        ruined his looks.
+                      </p>
+                      <a href="#" class="buy-tickets">Buy Tickets</a>
+                    </div>
+                  </div>
+                  <div class="movie-card">
+                    <div class="movie-content">
+                      <h2 class="movie-title">Ring</h2>
+                      <p class="movie-rating">Rating: 8.5/10</p>
+                      <p class="movie-genre">Genre: Action, Comedy</p>
+                      <p class="movie-description">
+                        A wisecracking mercenary gets experimented on and becomes
+                        immortal but ugly, and sets out to track down the man who
+                        ruined his looks.
+                      </p>
+                      <a href="#" class="buy-tickets">Buy Tickets</a>
+                    </div>
+                  </div>
+                <!-- Repeat Movie Cards as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </main>
-    <section></section>
+
     <script src="scripts/slider.js"></script>
     <script src="scripts/video.js"></script>
+    <script src="scripts/tabs.js"></script>
   </body>
 </html>
