@@ -17,6 +17,14 @@
   </head>
 
   <body>
+    <div id="languageModal" class="modal" style="display: none;">
+        <div class="modal-content">
+          <h2>Select Language</h2>
+          <button onclick="setLanguage('en')">English</button>
+          <button onclick="setLanguage('ar')">Arabic</button>
+        </div>
+      </div>
+  
     <nav>
       <input type="checkbox" id="check" />
       <label for="check" class="checkbtn">
@@ -247,7 +255,7 @@
             <div class="now_showing">
               <div class="now_showing_container grid-container">
                 <!-- Movie Card 1 -->
-                <div class="movie-card" style="margin-left: 10px;">
+                <div id="movie-card" class="movie-card" style="margin-left: 10px;">
                   <div class="movie-content">
                     <h2 class="movie-title">Deadpool</h2>
                     <p class="movie-rating">Rating: 8.5/10</p>
@@ -258,9 +266,24 @@
                       ruined his looks.
                     </p>
                     <a href="#" class="buy-tickets">Buy Tickets</a>
+                    <button
+                        id="watch_trailer_btn"
+                        class="watch-trailer"
+                        data-video-id="Jm27YjLnPHc"
+                      >
+                        <i
+                          class="fa fa-play-circle-o"
+                          style="
+                            font-size: 28px;
+                            color: #fff;
+                            margin-right: 15px;
+                          "
+                        ></i
+                        >Watch Trailer
+                      </button>
                   </div>
                 </div>
-                <div class="movie-card">
+                <div  id="movie-card" class="movie-card">
                     <div class="movie-content">
                       <h2 class="movie-title">Deadpool</h2>
                       <p class="movie-rating">Rating: 8.5/10</p>
@@ -273,7 +296,7 @@
                       <a href="#" class="buy-tickets">Buy Tickets</a>
                     </div>
                   </div>
-                  <div class="movie-card">
+                  <div  id="movie-card" class="movie-card">
                     <div class="movie-content">
                       <h2 class="movie-title">Deadpool</h2>
                       <p class="movie-rating">Rating: 8.5/10</p>
@@ -286,7 +309,7 @@
                       <a href="#" class="buy-tickets">Buy Tickets</a>
                     </div>
                   </div>
-                  <div class="movie-card">
+                  <div  id="movie-card" class="movie-card">
                     <div class="movie-content">
                       <h2 class="movie-title">Deadpool</h2>
                       <p class="movie-rating">Rating: 8.5/10</p>
@@ -307,7 +330,7 @@
             <div class="coming_up hidden">
               <div class="coming_up_container grid-container">
                 <!-- Movie Card 1 -->
-                <div class="movie-card" style="margin-left: 10px;">
+                <div  id="movie-card" class="movie-card" style="margin-left: 10px;">
                   <div class="movie-content">
                     <h2 class="movie-title">Deadpool 2</h2>
                     <p class="movie-rating">Rating: 8.0/10</p>
@@ -318,7 +341,7 @@
                     <a href="#" class="buy-tickets">Buy Tickets</a>
                   </div>
                 </div>
-                <div class="movie-card">
+                <div  id="movie-card" class="movie-card">
                     <div class="movie-content">
                       <h2 class="movie-title">Deadpool</h2>
                       <p class="movie-rating">Rating: 8.5/10</p>
@@ -331,7 +354,7 @@
                       <a href="#" class="buy-tickets">Buy Tickets</a>
                     </div>
                   </div>
-                  <div class="movie-card">
+                  <div  id="movie-card" class="movie-card">
                     <div class="movie-content">
                       <h2 class="movie-title">Deadpool</h2>
                       <p class="movie-rating">Rating: 8.5/10</p>
@@ -344,7 +367,7 @@
                       <a href="#" class="buy-tickets">Buy Tickets</a>
                     </div>
                   </div>
-                  <div class="movie-card">
+                  <div  id="movie-card" class="movie-card">
                     <div class="movie-content">
                       <h2 class="movie-title">Ring</h2>
                       <p class="movie-rating">Rating: 8.5/10</p>
@@ -443,14 +466,127 @@
       <section class="food_section">
         <h1>FOOD & BEVERAGES</h1>
         <div class="food_container">
-            <div class="food_main">
-
+          <div class="food_main grid-container">
+            <div class="food_card">
+              <div class="image_div">
+                <img src="images/photo-1505686994434-e3cc5abf1330.avif" alt="Food Image">
+              </div>
+              <div class="food_content_main_content">
+                <h2>Pizza</h2>
+                <p>$12.99</p>
+                <button>Buy Now</button>
+              </div>
             </div>
+            <div class="food_card">
+              <div class="image_div">
+                <img src="images/photo-1505686994434-e3cc5abf1330.avif" alt="Food Image">
+              </div>
+              <div class="food_content_main_content">
+                <h2>Burger</h2>
+                <p>$8.99</p>
+                <button>Buy Now</button>
+              </div>
+            </div>
+            <div class="food_card">
+              <div class="image_div">
+                <img src="images/photo-1505686994434-e3cc5abf1330.avif" alt="Food Image">
+              </div>
+              <div class="food_content_main_content">
+                <h2>Pasta</h2>
+                <p>$10.50</p>
+                <button>Buy Now</button>
+              </div>
+            </div>
+            <div class="food_card">
+              <div class="image_div">
+                <img src="images/photo-1505686994434-e3cc5abf1330.avif" alt="Food Image">
+              </div>
+              <div class="food_content_main_content">
+                <h2>Fries</h2>
+                <p>$5.50</p>
+                <button>Buy Now</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <section class="contact_section">
+        <div class="contact_container">
+            <div class="contact_main">
+                <div class="contact_content">
+                    <div class="contact_content_header">
+                        <h1>Try private by 64 HORIZON CINEMAS</h1>
+                        <p>Private by 64 HORIZON allows you to book a full private auditorium to celebrate your special occasions</p>
+                        <p class="contact_content_second_p">
+                            For booking and inquiries, please contact us. Send us a message and we'll respond within 24 hours. Requests should be sent at least 2 days in advance of the planned event date.
+                        </p>
+                    </div>
+                    <div class="contact_content_form_container">
+                        <form id="bookingForm" action="" onsubmit="sendToWhatsApp(); return false;">
+                            <div>
+                                <span>
+                                    <label for="firstName">First Name*</label>
+                                    <input type="text" id="firstName" placeholder="Enter First Name" required />
+                                </span>
+                                <span>
+                                    <label for="lastName">Last Name*</label>
+                                    <input type="text" id="lastName" placeholder="Enter Last Name" required />
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    <label for="phone">Phone Number*</label>
+                                    <input type="text" id="phone" placeholder="Enter Phone Number" required />
+                                </span>
+                                <span>
+                                    <label for="guests">Number Of Guests*</label>
+                                    <input type="number" id="guests" placeholder="Enter Number Of Guests" required />
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    <label for="date">Preferred Date*</label>
+                                    <input type="date" id="date" placeholder="Select Preferred Date" required />
+                                </span>
+                                <span>
+                                    <label for="time">Preferred Time*</label>
+                                    <input type="time" id="time" placeholder="Select Preferred Time" required />
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    <label for="movie">Preferred Movie*</label>
+                                    <input type="text" id="movie" placeholder="Enter Movie Name" required />
+                                </span>
+
+                            </div>
+                            <div>
+                                <span id="checkbox_span">
+                                    <input  type="checkbox" id="includeFood">
+                                    <label for="includeFood">Do you want to include Food & Beverages*</label>
+                                </span>
+                            </div>
+                            <div class="textarea_div">
+                                <textarea id="details" rows="10" cols="40" placeholder="Would you like to add more details"></textarea>
+                            </div>
+                            <div>
+                                <button class="reservation_btn" type="submit">Book Reservation</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
       
     </main>
-
+    <!-- <script src="scripts/language.js"></script> -->
+    <script src="scripts/sendmessage.js"></script>
     <script src="scripts/slider.js"></script>
     <script src="scripts/video.js"></script>
     <script src="scripts/tabs.js"></script>

@@ -621,10 +621,10 @@ main {
     display: none;
   }
   
-  .grid-container {
+ .movies_section .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 20px;
   }
   
   .movie-card {
@@ -647,12 +647,55 @@ main {
     .grid-container {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+
+    .movie-card {
+        width: 390px;
+    }
+
+    #movie-card {
+        margin-left: 10px;
+    }
+
+    .movies_section {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .movies_div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .movies_header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .left_movies_header {
+        width: 100%;
+    }
+
+    .left_movies_header h1 {
+        font-size: 1rem;
+    }
+
+    .right_movies {
+        width: 100%;
+        line-height: 40px;
+        text-align: right;
+    }
   }
 
   
 .movie-card {
     position: relative;
-    width: 310px;
+    width: 320px;
     height: 450px;
     background-image: url('../images/deadpoolsmall.jpg'); /* Background image */
     background-size: cover;
@@ -839,4 +882,270 @@ main {
     background-color: #fff;
     color: #ff7A00;
     border: 1px solid #ff7A00;
+}
+
+/* food and drinks section  */
+.food_section {
+    padding: 50px 20px 10px 20px;
+    height:45vh ;
+    /* background-image:url(../images/pop.avif) ; */
+  }
+  
+  .food_section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .food_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .food_main {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .food_container .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Food Card Styling */
+  .food_card {
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    justify-content: space-between;
+    background-color: #000;
+    width: 400px;
+  }
+
+  .food_card > div {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .food_card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image Section */
+  .image_div {
+    width: 100%;
+  }
+  
+  .image_div img {
+    width: 100%;
+  }
+  
+  /* Content Section */
+  .food_content_main_content {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .food_content_main_content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .food_content_main_content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #d5d4d4;
+  }
+  
+  .food_content_main_content button {
+    padding: 10px 20px;
+    background-color: #ff7A00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .food_content_main_content button:hover {
+    background-color: #ff7b00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .food_card {
+      flex-direction: column;
+    }
+  
+    .image_div img {
+      height: auto;
+    }
+  
+    .food_content_main_content {
+      padding: 15px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .food_content_main_content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .food_content_main_content p {
+      font-size: 1rem;
+    }
+  
+    .food_content_main_content button {
+      padding: 8px 16px;
+    }
+    .food_card {
+        width: 350px;
+    }
+  }
+  
+.food_main {
+    background-color: #ffffff00;
+}
+
+/* CONTACT section stylING  */
+
+.contact_section {
+    background-image: url(../images/cinema.jpg);
+    padding:100px 20px;
+    /* background-color: #2c3e50; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.contact_container {
+    width: 85%;
+    padding: 10px;
+}
+
+.contact_content_header{
+line-height: 40px;
+color: #fff;
+margin-bottom: 35px;
+text-align: center;
+}
+
+.contact_content_header h1 {
+    font-size: 2rem;
+}
+
+.contact_content_header p {
+    font-size: 0.8rem;
+}
+
+.contact_content_header .contact_content_second_p {
+    text-align: center;
+    padding: 0 200px;
+    line-height: 20px;
+}
+
+.contact_content_form_container {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_content_form_container form {
+    width: 65%;
+}
+
+.contact_content_form_container form > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.contact_content_form_container form > div span {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    line-height: 35px;
+}
+
+.contact_content_form_container form > div span label {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.contact_content_form_container form > div span input {
+    padding: 15px 15px;
+    font-size: 0.7rem;
+    columns: gray;
+    border: 1px solid #00000048;
+    background-color: #D9D9D9;
+}
+
+.contact_content_form_container form > div span input:focus {
+    outline-color: #db6a01;
+    outline-width: 1px;
+}
+
+.textarea_div {
+    margin: 40px 0;
+}
+
+.textarea_div textarea {
+    width: 100%;
+    padding: 20px 25px;
+}
+
+.textarea_div textarea:focus{
+    outline-color:#ff7A00 ;
+}
+
+#checkbox_span {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#checkbox_span input {
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#checkbox_span input:focus{
+    outline-color: #ff7A00;
+}
+.reservation_btn {
+    padding: 15px 55px;
+    height: 45px;
+    background-color: #ff7A00;
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #ff7A00;
+    width: 200px;
+    margin-top: 20px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.reservation_btn:hover {
+    background-color: #db6a01;
 }
