@@ -753,15 +753,21 @@ main {
 /* Styling for the Buy Tickets button */
 .buy-tickets {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 15px;
     background-color: #e50914;
     color: #fff;
     text-decoration: none;
+    font-size: 0.8rem;
     font-weight: bold;
     border-radius: 5px;
     transform: translateY(100%);
     transition: 0.5s ease;
     opacity: 0;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
 }
 
 /* Animate Buy Tickets button from bottom to top on hover */
@@ -1149,4 +1155,14 @@ text-align: center;
 
 .reservation_btn:hover {
     background-color: #db6a01;
+}
+
+.small_card_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small_div_container {
+    display: flex;
 }
