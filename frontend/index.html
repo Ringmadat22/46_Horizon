@@ -14,6 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
   </head>
 
   <body>
@@ -667,7 +669,7 @@
                             <div>
                                 <span>
                                     <label for="movie">Preferred Movie*</label>
-                                    <select type="dropdown" id="movie" placeholder="Enter Movie Name" required >
+                                    <select  type="dropdown" id="movie" placeholder="Enter Movie Name" required >
                                       <option value="">Movie1</option>
                                       <option value="">Movie2</option>
                                       <option value="">Movie3</option>
@@ -694,6 +696,65 @@
                                 <button class="reservation_btn" type="submit">Book Reservation</button>
                             </div>
                         </form>
+                        <script>
+                          document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    
+    // Collect form data
+    const formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        phone: document.getElementById('phone').value,
+        guests: document.getElementById('guests').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        movie: document.getElementById('movie').value,
+        seatNumber: document.getElementById('seat_number').value,
+        includeFood: document.getElementById('includeFood').checked,
+        details: document.getElementById('details').value,
+    };
+    
+    // Process payment with selected gateway
+    processPayment(formData);
+});
+
+function processPayment(formData) {
+    // Integrate payment gateway APIs (pseudo)
+    // After payment success:
+    if (paymentSuccessful) {
+        generateTicket(formData);
+    } else {
+        alert('Payment failed, please try again.');
+    }
+}
+
+function generateTicket(formData) {
+    // Generate unique ticket number
+    const ticketNumber = 'TICKET' + Date.now();
+    
+    // Generate QR code
+    const qrCode = new QRCode(document.getElementById('qrcode'), {
+        text: ticketNumber,
+        width: 128,
+        height: 128,
+    });
+    
+    // Display the invoice
+    displayInvoice(ticketNumber, qrCode);
+}
+
+function displayInvoice(ticketNumber, qrCode) {
+    // Show the ticket and QR code to the user
+    alert(`Your booking is confirmed! Ticket Number: ${ticketNumber}`);
+    // Display QR code on the page
+    document.getElementById('invoice').innerHTML = `
+        <h3>Booking Confirmed</h3>
+        <p>Ticket Number: ${ticketNumber}</p>
+        <div id="qrcode"></div>
+    `;
+}
+
+                        </script>
                     </div>
 
                 </div>

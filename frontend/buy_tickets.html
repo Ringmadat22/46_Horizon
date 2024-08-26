@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY TICKETS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: auto;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.invoice {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.invoice p {
+    margin: 10px 0;
+}
+
+    </style>
+    <head>
+        <a href="index.html">Home</a>
+    </head>
+    <main>
+        <div>
+            <h1>Cinema Booking and Payment System</h1>
+            <form id="bookingForm" action="" onsubmit="submitBookingForm(); return false;">
+                <div>
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="firstName" placeholder="Enter First Name" required />
+                </div>
+                <div>
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" placeholder="Enter Last Name" required />
+                </div>
+                <div>
+                    <label for="phone">Phone Number*</label>
+                    <input type="text" id="phone" placeholder="Enter Phone Number" required />
+                </div>
+                <div>
+                    <label for="guests">Number Of Guests*</label>
+                    <input type="number" id="guests" placeholder="Enter Number Of Guests" required />
+                </div>
+                <div>
+                    <label for="date">Preferred Date*</label>
+                    <input type="date" id="date" required />
+                </div>
+                <div>
+                    <label for="time">Preferred Time*</label>
+                    <input type="time" id="time" required />
+                </div>
+                <div>
+                    <label for="movie">Preferred Movie*</label>
+                    <select id="movie" required>
+                        <option value="Movie1">Movie1</option>
+                        <option value="Movie2">Movie2</option>
+                        <option value="Movie3">Movie3</option>
+                        <option value="Movie4">Movie4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="seat_number">Select Seat Number</label>
+                    <input type="number" id="seat_number" placeholder="Enter Seat Number" required />
+                </div>
+                <div>
+                    <input type="checkbox" id="includeFood">
+                    <label for="includeFood">Do you want to include Food & Beverages?</label>
+                </div>
+                <div>
+                    <textarea id="details" rows="4" cols="50" placeholder="Add more details"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Book Reservation</button>
+                </div>
+            </form>
+            
+            <div id="invoice" class="invoice"></div>
+            
+            <div id="invoice" class="invoice"></div>
+        </div>
+    </main>
+    <script>
+        // Function to handle form submission
+async function submitBookingForm() {
+    // Collect form data
+    const formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        phone: document.getElementById('phone').value,
+        guests: document.getElementById('guests').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        movie: document.getElementById('movie').value,
+        seatNumber: document.getElementById('seat_number').value,
+        includeFood: document.getElementById('includeFood').checked,
+        details: document.getElementById('details').value,
+        paymentPhone: "+211989173582" // Your cinema's mobile money number
+    };
+
+    // Send booking data to the server for payment processing
+    const response = await fetch('/process-payment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        generateTicket(result.ticketNumber);
+    } else {
+        alert(result.message);
+    }
+}
+
+// Function to generate the ticket
+function generateTicket(ticketNumber) {
+    // Generate QR code
+    const qrCodeContainer = document.createElement('div');
+    const qrCode = new QRCode(qrCodeContainer, {
+        text: ticketNumber,
+        width: 128,
+        height: 128
+    });
+
+    // Display the invoice
+    displayInvoice(ticketNumber, qrCodeContainer);
+}
+
+// Function to display the invoice
+function displayInvoice(ticketNumber, qrCodeContainer) {
+    const invoiceContainer = document.getElementById('invoice');
+    invoiceContainer.innerHTML = `
+        <h2>Booking Confirmed</h2>
+        <p><strong>Ticket Number:</strong> ${ticketNumber}</p>
+        <div><strong>QR Code:</strong></div>
+    `;
+    invoiceContainer.appendChild(qrCodeContainer);
+}
+
+    </script>
+    <footer>
+
+    </footer>
+</body>
+</html>
