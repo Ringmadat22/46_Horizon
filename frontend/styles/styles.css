@@ -786,6 +786,43 @@ main {
     transition-delay: 0.3s; /* Delay to make the button appear after content */
 }
 
+/* Hide the play and info buttons by default */
+.mobile-play-btn,
+.mobile-info-btn {
+    display: none;
+}
+
+/* Display the buttons on mobile devices */
+@media (max-width: 768px) {
+    .mobile-play-btn,
+    .mobile-info-btn {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        z-index: 3;
+    }
+    
+    .mobile-info-btn {
+        right: 50px; /* Adjust positioning for info button */
+    }
+
+    .movie-content {
+        display: none; /* Hide content by default */
+    }
+
+    .movie-card.show-info .movie-content {
+        display: block; /* Show content when info button is clicked */
+        background-color: rgba(0, 0, 0, 0.8); /* Ensure background is visible */
+    }
+}
+
 /* TOP TEN STYLING  */
 
 .top_ten {
