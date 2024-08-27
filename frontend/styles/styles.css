@@ -810,7 +810,7 @@ main {
     }
     
     .mobile-info-btn {
-        right: 50px; /* Adjust positioning for info button */
+        right: 10px; /* Adjust positioning for info button */
     }
 
     .movie-content {
