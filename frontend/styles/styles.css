@@ -899,6 +899,32 @@ main {
     border: 1px solid #ff7A00;
 }
 
+#appear_when_full_screen {
+  display: block;
+}
+
+#appear_when_half_screen {
+  display: none;
+}
+
+@media (max-width:428px) {
+  #appear_when_full_screen {
+    display: none;
+  }
+  
+  #appear_when_half_screen {
+    display: block;
+  }
+
+  #right_top_ten_container {
+    display: none;
+  }
+
+  .left_top_ten_container > div > div {
+    padding-right: 0;
+}
+}
+
 /* food and drinks section  */
 .food_section {
     padding: 50px 20px 10px 20px;
