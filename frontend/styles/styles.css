@@ -1222,6 +1222,34 @@ text-align: center;
 }
 }
 
+@media (max-width:428px) {
+  .contact_content_header .contact_content_second_p {
+    text-align: center;
+    padding: 0 10px;
+    line-height: 20px;
+}
+
+.contact_content_form_container form {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.contact_content_form_container form > div {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+#checkbox_label_id {
+  font-size: 0.8rem;
+}
+
+.contact_content_form_container form > div span {
+  margin-bottom: 20px;
+}
+}
+
 /* FOOTER SECTION STYLING */
 
 footer {
