@@ -137,6 +137,13 @@
 
 @media (max-width: 375px) {
     #mySlides_image {
+        width: 355px;
+        height: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    #mySlides_image {
         width: 375px;
         height: auto;
     }
