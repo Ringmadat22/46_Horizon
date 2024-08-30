@@ -174,162 +174,246 @@ main {
 }
 
 /* Slideshow container */
+
+/* Slider container */
+
+
+/* Slider container */
 .slider {
-    margin-top: 100px;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-height: 60vh; /* Optional max-height */
 }
+
+/* Slideshow container */
 .slideshow-container {
-    width:100%;
-    position: relative;
-    overflow-x: hidden;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-    width: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100%; /* Ensure it doesn't exceed container */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+#mySlides_image_div {
+  width: 100%;
+}
+
+#mySlides_image {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: #FF7A00;
+  z-index: 2; /* Ensure buttons are above other content */
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text-container {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  bottom: 100px;
+  left: 120px;
+  width: 100%;
+  z-index: 1; /* Ensure text is above slides but below buttons */
+}
+
+.text-container .text-main {
+  display: flex;
+  flex-direction: column; /* Stack text and buttons vertically */
+}
+
+#movie_title {
+  margin-bottom: 30px;
+}
+
+#movie_title h1 {
+  font-size: 3rem;
+  margin-left: 10px;
+}
+
+/* Buttons */
+#buy_now {
+  padding: 5px 40px;
+  font-size: 0.8rem;
+  height: 45px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 30px;
+  background-color: #FF7A00;
+  border: 1px solid #FF7A00;
+  margin-right: 10px;
+  transition: all ease 0.3s;
+}
+
+#watch_trailer_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 35px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent; /* Use transparent for background */
+}
+
+#watch_trailer_btn:hover {
+  border: 1px solid #ff7A00;
+  background-color: #FF7A00;
+}
+
+#buy_now:hover {
+  background-color: inherit;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ff7A00;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #fff;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Media Queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  #movie_title h1 {
+      font-size: 2rem;
   }
 
-  #mySlides_image_div {
-    background-color:#FF7A00;
-    padding: 0;
-    width: 100%;
-    margin-top: 30px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  #mySlides_image {
+      width: 100%;
+      height: auto;
   }
 
-  #mySlides_image_div #mySlides_image {
-    width: 1600px;
+  #buy_now, #watch_trailer_btn {
+      font-size: 0.9rem;
+      padding: 5px 20px;
   }
 
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: #FF7A00;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-    /* border: 1px solid #ff7A00; */
-  }
-  
-  /* Caption text */
   .text-container {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 100px;
-    width: 100%;
-    left: 120px;
+      left: 50px;
+      bottom: 80px;
   }
 
-  .text-container .text-main > div {
-    display: flex;
+  .prev, .next {
+      padding: 12px; /* Adjust button padding */
+      font-size: 16px; /* Adjust button font size */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  #movie_title h1 {
+      font-size: 1.5rem;
   }
 
-  .text-container .text-main > div #buy_now {
-    padding: 5px 40px;
-    font-size: 0.8rem;
-    height: 45px;
-    cursor: pointer;
-    color: #fff;
-    border-radius: 30px;
-    background-color: #FF7A00;
-    border: 1px solid #FF7A00;
-    margin-right: 10px;
-    transition: all ease 0.3s;
+  #buy_now, #watch_trailer_btn {
+      font-size: 0.8rem;
+      padding: 5px 15px;
   }
 
-  .text-container .text-main > div #watch_trailer_btn {
+  .text-container {
+      left: 20px;
+      bottom: 50px;
+  }
+
+  #mySlides_image {
+      width: 100%;
+      height: auto;
+  }
+
+  .prev, .next {
+      padding: 8px; /* Further adjust button padding */
+      font-size: 14px; /* Further adjust button font size */
+  }
+
+  .slider {
+    margin-top: 100px;
+  }
+
+
+}
+
+@media (max-width:420px) {
+  #watch_trailer_btn {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 20px;
-    height: 45px;
+    height: 25px;
     cursor: pointer;
     border-radius: 35px;
     border: 1px solid #fff;
     color: #fff;
-    background-color: #ffffff00;
-  }
-
-  .text-container .text-main > div #watch_trailer_btn:hover {
-    border: 1px solid #ff7A00;
-    background-color: #FF7A00;
-  }
-
-  .text-container .text-main > div #buy_now:hover {
-    background-color: inherit;
-    border: 1px solid #fff;
-    color: #fff;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #ff7A00;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #fff;
-  }
-
-  #movie_title {
-    margin-bottom:30px ;
+    background-color: transparent; /* Use transparent for background */
   }
 
   #movie_title h1 {
-    font-size: 3rem;
-    margin-left: 10px;
+    font-size: 10px;
   }
-  
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+
+  #movie_title {
+    margin-bottom: 30px;
   }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
- */
+
+}
+
 
 /* VIDEO MODEL PLAYER  */
 
@@ -389,200 +473,6 @@ main {
 
 #videoFrame {
     height: 80vh;
-}
-
-/* Slider container */
-.slider {
-    background-color: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    max-height: 60vh; /* Optional max-height */
-}
-
-/* Slideshow container */
-.slideshow-container {
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
-    max-width: 100%; /* Ensure it doesn't exceed container */
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-    width: 100%;
-}
-
-#mySlides_image_div {
-    width: 100%;
-}
-
-#mySlides_image {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Navigation buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    background-color: #FF7A00;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text-container {
-    color: #f2f2f2;
-    font-size: 15px;
-    position: absolute;
-    bottom: 100px;
-    left: 120px;
-    width: 100%;
-}
-
-.text-container .text-main {
-    display: flex;
-    flex-direction: column; /* Stack text and buttons vertically */
-}
-
-#movie_title {
-    margin-bottom: 30px;
-}
-
-#movie_title h1 {
-    font-size: 3rem;
-    margin-left: 10px;
-}
-
-/* Buttons */
-#buy_now {
-    padding: 5px 40px;
-    font-size: 0.8rem;
-    height: 45px;
-    cursor: pointer;
-    color: #fff;
-    border-radius: 30px;
-    background-color: #FF7A00;
-    border: 1px solid #FF7A00;
-    margin-right: 10px;
-    transition: all ease 0.3s;
-}
-
-#watch_trailer_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 20px;
-    height: 45px;
-    cursor: pointer;
-    border-radius: 35px;
-    border: 1px solid #fff;
-    color: #fff;
-    background-color: #ffffff00;
-}
-
-#watch_trailer_btn:hover {
-    border: 1px solid #ff7A00;
-    background-color: #FF7A00;
-}
-
-#buy_now:hover {
-    background-color: inherit;
-    border: 1px solid #fff;
-    color: #fff;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #ff7A00;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #fff;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-/* Media Queries */
-
-/* For tablets */
-@media (max-width: 768px) {
-    #movie_title h1 {
-        font-size: 1.5rem;
-    }
-
-    #mySlides_image {
-        width: 100%;
-        height: auto;
-    }
-
-    #buy_now, #watch_trailer_btn {
-        font-size: 0.9rem;
-        padding: 5px 20px;
-    }
-
-    .text-container {
-        left: 50px;
-        bottom: 80px;
-    }
-}
-
-/* For mobile phones */
-@media (max-width: 480px) {
-    #movie_title h1 {
-        font-size: 1.2rem;
-    }
-
-    #buy_now, #watch_trailer_btn {
-        font-size: 0.8rem;
-        padding: 5px 15px;
-    }
-
-    .text-container {
-        left: 20px;
-        bottom: 50px;
-    }
-
-    #mySlides_image {
-        width: 100%;
-        height: auto;
-    }
 }
 
 /* MOVIES CSS */
