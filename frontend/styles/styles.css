@@ -187,6 +187,7 @@ main {
   width: 100%;
   height: auto;
   max-height: 60vh; /* Optional max-height */
+  margin-top: 120px;
 }
 
 /* Slideshow container */
@@ -205,12 +206,15 @@ main {
 
 #mySlides_image_div {
   width: 100%;
+  height: auto;
 }
 
 #mySlides_image {
-  width: 100%; /* Make images responsive */
+  width: 1655px; 
   height: auto; /* Maintain aspect ratio */
 }
+
+
 
 /* Navigation buttons */
 .prev, .next {
@@ -264,6 +268,11 @@ main {
 }
 
 /* Buttons */
+
+.movie_div_buttons {
+  display: flex;
+}
+
 #buy_now {
   padding: 5px 40px;
   font-size: 0.8rem;
@@ -336,10 +345,7 @@ main {
       font-size: 2rem;
   }
 
-  #mySlides_image {
-      width: 100%;
-      height: auto;
-  }
+ 
 
   #buy_now, #watch_trailer_btn {
       font-size: 0.9rem;
@@ -373,10 +379,7 @@ main {
       bottom: 50px;
   }
 
-  #mySlides_image {
-      width: 100%;
-      height: auto;
-  }
+
 
   .prev, .next {
       padding: 8px; /* Further adjust button padding */

@@ -1,0 +1,205 @@
+@media (max-width: 1280px) {
+    #mySlides_image {
+        width: 1300px;
+    }
+
+    #movie_title h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    #mySlides_image {
+        width: 1200px;
+    }
+
+    #movie_title h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1114px) {
+    #mySlides_image {
+        width: 1200px;
+    }
+
+    #movie_title h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 884px) {
+    #mySlides_image {
+        width: 1050px;
+    }
+
+    #movie_title h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #mySlides_image {
+        width: 845px;
+    }
+
+    #movie_title h1 {
+        font-size: 2rem;
+    }
+
+    .text-container {
+        left: 60px;
+        bottom: 60px;
+    }
+  
+}
+
+@media (max-width: 834px) {
+    #mySlides_image {
+        width: 830px;
+    }
+
+    #movie_title h1 {
+        font-size: 2rem;
+    }
+
+    .text-container {
+        left: 60px;
+        bottom: 60px;
+    }
+  
+}
+
+@media (max-width: 768px) {
+    #mySlides_image {
+        width: 800px;
+    }
+
+    #movie_title h1 {
+        font-size: 2rem;
+    }
+
+    .text-container {
+        left: 60px;
+        bottom: 60px;
+    }
+  
+}
+
+
+@media (max-width: 428px) {
+    #mySlides_image {
+        width: 550px;
+        height: 25vh;
+    }
+
+    #movie_title h1 {
+        font-size: 1rem;
+    }
+
+    .text-container {
+        left: 30px;
+        bottom: 30px;
+    }
+
+    #buy_now {
+        padding: 5px 10px;
+        font-size: 0.6rem;
+        height: 30px;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 30px;
+        background-color: #FF7A00;
+        border: 1px solid #FF7A00;
+        margin-right: 10px;
+        transition: all ease 0.3s;
+      }
+
+      #watch_trailer_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 10px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 35px;
+        border: 1px solid #fff;
+        color: #fff;
+        background-color: transparent; /* Use transparent for background */
+      }
+
+      #movie_title {
+        margin-bottom: 10px;
+      }
+      
+  
+}
+
+@media (max-width: 375px) {
+    #mySlides_image {
+        width: 375px;
+        height: auto;
+    }
+
+    #movie_title h1 {
+        font-size: 0.8rem;
+    }
+
+    .text-container {
+        left: 30px;
+        bottom: 30px;
+    }
+
+    #buy_now {
+        padding: 2px 10px;
+        font-size: 0.5rem;
+        height: 20px;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 30px;
+        background-color: #FF7A00;
+        border: 1px solid #FF7A00;
+        margin-right: 10px;
+        transition: all ease 0.3s;
+      }
+
+      #watch_trailer_btn {
+        display: flex;
+        justify-content: center;
+        font-size: 0.5rem;
+        align-items: center;
+        padding: 2px 10px;
+        height: 20px;
+        cursor: pointer;
+        border-radius: 35px;
+        border: 1px solid #fff;
+        color: #fff;
+        background-color: transparent; /* Use transparent for background */
+      }
+
+      .prev, .next {
+        padding: 7px; /* Adjust button padding */
+        font-size: 7px; /* Adjust button font size */
+    }
+
+}
+
+@media (max-width: 375px) {
+    #mySlides_image {
+        width: 360px;
+        height: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    #mySlides_image {
+        width: 320px;
+        height: auto;
+    }
+
+
+    .text-container {
+        left: 30px;
+        bottom: 15px;
+    }
+}
